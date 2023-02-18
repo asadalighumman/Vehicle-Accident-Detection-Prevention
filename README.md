@@ -2,7 +2,11 @@ I am a student of university of Sargodha
 I studied BS Information & Technology.
 This is my final year project 
 This is iot base project.
-My project Supervisor is Mr.Abid Rafiq(Assistant Professor)
+My project Supervisor is Mr.Abid Rafiq(Assistant Professor).
+This prject i completed with the help of my other two group members.
+BITF19E025 Palwasha Akram.
+BITF19E004 Shafia Batool.
+BITF19M048 Asad Ali.
 
 
 # Vehicle-Accident-Detection-Prevention
