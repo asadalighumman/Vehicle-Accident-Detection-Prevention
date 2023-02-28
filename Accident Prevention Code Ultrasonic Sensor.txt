@@ -1,0 +1,40 @@
+int trigPin = 9;// Digtial pin 9 of ardiuno uno
+int echoPin = 10;//Digital Pin 10 Of ardiuno uno
+int buzzer = 11;//Digital Pim 11 for Buzzer
+int led = 7; //Digitial Pin 7 of Ardiuno
+
+
+void setup() {
+   Serial.begin(9600); //Serial Moniotr
+   pinMode(led, OUTPUT);
+   pinMode(trigPin, OUTPUT);//Triger pin is used for output 
+   pinMode(echoPin, INPUT);//Echo pin is used for Input
+   pinMode(buzzer, OUTPUT);  
+  // put your setup code here, to run once:
+
+}
+
+void loop() {
+  long duration, distance;
+  digitalWrite(trigPin,HIGH);
+  delayMicroseconds(4000); //Delay 1000 Micro second 
+  digitalWrite(trigPin, LOW);
+  duration=pulseIn(echoPin, HIGH);
+  distance =(duration/2)/29.1;
+  Serial.print(distance);
+  Serial.println("CM");//Measure Distnace In centimeters
+  delay(200);
+ 
+ if((distance<=50)) //Means If distance between Object and  Ultrasonic sesors is less than or equal to 10cm then led light blink and give alert
+  {
+    digitalWrite(led, HIGH);=
+    digitalWrite(buzzer, HIGH);
+}
+   else if(distance>10) //If distance is greater then 10 cm then led light low
+ {
+     digitalWrite(led, LOW);//led light will turn off when distance is more than 10 cm
+     digitalWrite(buzzer, LOW);//Buzzer will turn off when distance is more than 10 cm
+   } 
+
+}
+
